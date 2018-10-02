@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @sketchbook.brand %>
+</p>
+
+<p>
+  <strong>Paper weight:</strong>
+  <%= @sketchbook.paper_weight %>
+</p>
+
+<p>
+  <strong>Paper type:</strong>
+  <%= @sketchbook.paper_type %>
+</p>
+
+<p>
+  <strong>Absorption:</strong>
+  <%= @sketchbook.absorption %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @sketchbook.artist_id %>
+</p>
+
+<%= link_to 'Edit', edit_sketchbook_path(@sketchbook) %> |
+<%= link_to 'Back', sketchbooks_path %>

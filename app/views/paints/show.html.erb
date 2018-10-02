@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paint type:</strong>
+  <%= @paint.paint_type %>
+</p>
+
+<p>
+  <strong>Sketchbook:</strong>
+  <%= @paint.sketchbook_id %>
+</p>
+
+<p>
+  <strong>Drying time:</strong>
+  <%= @paint.drying_time %>
+</p>
+
+<%= link_to 'Edit', edit_paint_path(@paint) %> |
+<%= link_to 'Back', paints_path %>

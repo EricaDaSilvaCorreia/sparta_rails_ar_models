@@ -1,0 +1,32 @@
+<%= form_with(model: paint, local: true) do |form| %>
+  <% if paint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paint.errors.count, "error") %> prohibited this paint from being saved:</h2>
+
+      <ul>
+      <% paint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :paint_type %>
+    <%= form.text_field :paint_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sketchbook_id %>
+    <%= form.number_field :sketchbook_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drying_time %>
+    <%= form.number_field :drying_time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
