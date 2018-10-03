@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Paints</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paint type</th>
+      <th>Sketchbook</th>
+      <th>Drying time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paints.each do |paint| %>
+      <tr>
+        <td><%= paint.paint_type %></td>
+        <td><%= paint.sketchbook_id %></td>
+        <td><%= paint.drying_time %></td>
+        <td><%= link_to 'Show', paint %></td>
+        <td><%= link_to 'Edit', edit_paint_path(paint) %></td>
+        <td><%= link_to 'Destroy', paint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paint', new_paint_path %>

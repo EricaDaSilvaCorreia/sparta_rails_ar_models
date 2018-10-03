@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'New Sketchbook', new_sketchbook_path %>
+
+<br>
+
+<div class="row">
+
+  <% @sketchbooks.each do |sketchbook| %>
+
+  <div class="card" style="width: 500px;">
+    <img class="card-img-top" src="<%= sketchbook.cover %>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Brand : <%= sketchbook.brand %></h5>
+      <div class="card-body">
+        <a href="#" class="card-link"><%= link_to 'Show', sketchbook %></a>
+        <a href="#" class="card-link"><%= link_to 'Edit', edit_sketchbook_path(sketchbook) %></a>
+        <a href="#" class="card-link"><%= link_to 'Destroy', sketchbook, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+      </div>
+    </div>
+
+    <% end %>
+
+  </div>
