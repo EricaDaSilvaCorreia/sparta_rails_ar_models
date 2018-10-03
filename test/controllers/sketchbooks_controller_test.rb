@@ -17,7 +17,7 @@ class SketchbooksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create sketchbook" do
     assert_difference('Sketchbook.count') do
-      post sketchbooks_url, params: { sketchbook: { absorption: @sketchbook.absorption, artist_id: @sketchbook.artist_id, brand: @sketchbook.brand, paper_type: @sketchbook.paper_type, paper_weight: @sketchbook.paper_weight } }
+      post sketchbooks_url, params: { sketchbook: { absorption: @sketchbook.absorption, artist_id: @sketchbook.artist_id, brand: @sketchbook.brand, cover: @sketchbook.cover, paper_type: @sketchbook.paper_type, paper_weight: @sketchbook.paper_weight } }
     end
 
     assert_redirected_to sketchbook_url(Sketchbook.last)
@@ -34,7 +34,7 @@ class SketchbooksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update sketchbook" do
-    patch sketchbook_url(@sketchbook), params: { sketchbook: { absorption: @sketchbook.absorption, artist_id: @sketchbook.artist_id, brand: @sketchbook.brand, paper_type: @sketchbook.paper_type, paper_weight: @sketchbook.paper_weight } }
+    patch sketchbook_url(@sketchbook), params: { sketchbook: { absorption: @sketchbook.absorption, artist_id: @sketchbook.artist_id, brand: @sketchbook.brand, cover: @sketchbook.cover, paper_type: @sketchbook.paper_type, paper_weight: @sketchbook.paper_weight } }
     assert_redirected_to sketchbook_url(@sketchbook)
   end
 

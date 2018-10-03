@@ -69,6 +69,6 @@ class SketchbooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sketchbook_params
-      params.require(:sketchbook).permit(:brand, :paper_weight, :paper_type, :absorption, :artist_id)
+      params.require(:sketchbook).permit(:brand, :paper_weight, :paper_type, :absorption, :artist_id, :cover)
     end
 end

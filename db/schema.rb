@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_02_163054) do
+ActiveRecord::Schema.define(version: 2018_10_02_214416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_10_02_163054) do
     t.string "paper_type"
     t.integer "absorption"
     t.integer "artist_id"
+    t.string "cover"
   end
 
 end

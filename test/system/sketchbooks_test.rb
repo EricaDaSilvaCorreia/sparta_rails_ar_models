@@ -17,6 +17,7 @@ class SketchbooksTest < ApplicationSystemTestCase
     fill_in "Absorption", with: @sketchbook.absorption
     fill_in "Artist", with: @sketchbook.artist_id
     fill_in "Brand", with: @sketchbook.brand
+    fill_in "Cover", with: @sketchbook.cover
     fill_in "Paper Type", with: @sketchbook.paper_type
     fill_in "Paper Weight", with: @sketchbook.paper_weight
     click_on "Create Sketchbook"
@@ -32,6 +33,7 @@ class SketchbooksTest < ApplicationSystemTestCase
     fill_in "Absorption", with: @sketchbook.absorption
     fill_in "Artist", with: @sketchbook.artist_id
     fill_in "Brand", with: @sketchbook.brand
+    fill_in "Cover", with: @sketchbook.cover
     fill_in "Paper Type", with: @sketchbook.paper_type
     fill_in "Paper Weight", with: @sketchbook.paper_weight
     click_on "Update Sketchbook"

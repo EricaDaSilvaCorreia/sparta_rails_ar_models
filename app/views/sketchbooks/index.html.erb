@@ -1,35 +1,23 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Sketchbooks</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Brand</th>
-      <th>Paper weight</th>
-      <th>Paper type</th>
-      <th>Absorption</th>
-      <th>Artist</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sketchbooks.each do |sketchbook| %>
-      <tr>
-        <td><%= sketchbook.brand %></td>
-        <td><%= sketchbook.paper_weight %></td>
-        <td><%= sketchbook.paper_type %></td>
-        <td><%= sketchbook.absorption %></td>
-        <td><%= sketchbook.artist_id %></td>
-        <td><%= link_to 'Show', sketchbook %></td>
-        <td><%= link_to 'Edit', edit_sketchbook_path(sketchbook) %></td>
-        <td><%= link_to 'Destroy', sketchbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= link_to 'New Sketchbook', new_sketchbook_path %>
 
 <br>
 
-<%= link_to 'New Sketchbook', new_sketchbook_path %>
+  <div class="row">
+
+    <% @sketchbooks.each do |sketchbook| %>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= sketchbook.cover %>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Brand : <%= sketchbook.brand %></h5>
+        <div class="card-body">
+          <a href="#" class="card-link"><%= link_to 'Show', sketchbook %></a>
+          <a href="#" class="card-link"><%= link_to 'Edit', edit_sketchbook_path(sketchbook) %></a>
+          <a href="#" class="card-link"><%= link_to 'Destroy', sketchbook, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
